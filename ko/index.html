@@ -3,56 +3,196 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>빌리조 — 에세이</title>
-  <meta name="description" content="비트코인, 투자, 그리고 생각에 관한 글." />
+  <title>빌리조</title>
+  <meta name="description" content="비트코인, 투자, 그리고 생각에 관한 글. 빌리조." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
   <style>
-    :root { --bg:#fafaf8; --text:#1a1a1a; --muted:#888; --border:#e8e8e4; --max:680px; }
-    * { box-sizing:border-box; margin:0; padding:0; }
-    body { background:var(--bg); color:var(--text); font-family:'Apple SD Gothic Neo','Noto Sans KR','Malgun Gothic',sans-serif; font-size:18px; line-height:1.85; }
-    a { color:inherit; text-decoration:none; }
-    a:hover { text-decoration:underline; }
-    nav { max-width:var(--max); margin:0 auto; padding:2.5rem 1.5rem 0; display:flex; align-items:baseline; gap:2rem; }
-    nav .site-name { font-size:1rem; font-weight:700; flex:1; }
-    nav .lang-links { display:flex; gap:1.5rem; font-size:0.85rem; color:var(--muted); }
-    nav .lang-links a.active { color:var(--text); font-weight:600; }
-    .hero { max-width:var(--max); margin:0 auto; padding:4rem 1.5rem 2rem; border-bottom:1px solid var(--border); }
-    .hero h1 { font-size:2rem; font-weight:700; line-height:1.3; margin-bottom:0.75rem; }
-    .hero p { color:var(--muted); font-size:1rem; }
-    .subscribe-section { max-width:var(--max); margin:0 auto; padding:2rem 1.5rem; border-bottom:1px solid var(--border); }
-    .subscribe-section p { font-size:0.95rem; color:var(--muted); margin-bottom:1rem; }
-    .subscribe-form { display:flex; gap:0.5rem; flex-wrap:wrap; }
-    .subscribe-form input[type="email"] { flex:1; min-width:200px; padding:0.6rem 0.9rem; border:1px solid var(--border); background:white; font-size:0.9rem; font-family:inherit; outline:none; }
-    .subscribe-form input[type="email"]:focus { border-color:var(--text); }
-    .subscribe-form button { padding:0.6rem 1.2rem; background:var(--text); color:white; border:none; font-size:0.9rem; font-family:inherit; cursor:pointer; white-space:nowrap; }
-    .subscribe-form button:hover { opacity:0.85; }
-    .essays { max-width:var(--max); margin:0 auto; padding:2rem 1.5rem; }
-    .section-label { font-size:0.75rem; text-transform:uppercase; letter-spacing:0.1em; color:var(--muted); margin-bottom:1.5rem; }
-    .essay-item { padding:1.25rem 0; border-bottom:1px solid var(--border); }
-    .essay-item:last-child { border-bottom:none; }
-    .essay-meta { font-size:0.8rem; color:var(--muted); margin-bottom:0.3rem; }
-    .essay-item h2 { font-size:1.1rem; font-weight:700; margin-bottom:0.25rem; line-height:1.4; }
-    .essay-item .subtitle { font-size:0.9rem; color:var(--muted); }
-    footer { max-width:var(--max); margin:4rem auto 0; padding:2rem 1.5rem; border-top:1px solid var(--border); font-size:0.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:0.5rem; }
-    footer a { color:var(--muted); }
-    footer a:hover { color:var(--text); }
-    @media (max-width:600px) { body { font-size:16px; } .hero h1 { font-size:1.5rem; } }
+    :root {
+      --bg: #f9f7f2;
+      --text: #1c1c1c;
+      --muted: #888;
+      --link: #1c1c1c;
+      --border: #e2ddd5;
+      --max: 620px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 18px; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', serif;
+      line-height: 1.9;
+      padding: 0 1.5rem;
+    }
+    a {
+      color: var(--link);
+      text-decoration: underline;
+      text-decoration-color: var(--border);
+      text-underline-offset: 3px;
+    }
+    a:hover { text-decoration-color: var(--text); }
+
+    .page {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 5rem 0 6rem;
+    }
+    header { margin-bottom: 3.5rem; }
+    header h1 {
+      font-family: 'Noto Serif KR', serif;
+      font-size: 2rem;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.15rem;
+    }
+    header .tagline {
+      font-size: 1rem;
+      color: var(--muted);
+      font-style: italic;
+    }
+    nav {
+      margin-top: 1.5rem;
+      display: flex;
+      gap: 1.5rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    nav a { text-decoration: none; color: var(--muted); }
+    nav a:hover { color: var(--text); }
+    nav a.active { color: var(--text); }
+
+    section { margin-bottom: 3.5rem; }
+    section h2 {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1.25rem;
+    }
+
+    .about p { font-size: 1.05rem; margin-bottom: 0.9rem; max-width: 560px; }
+    .about p:last-child { margin-bottom: 0; }
+
+    .essay-list { list-style: none; }
+    .essay-list li {
+      padding: 0.9rem 0;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+    }
+    .essay-list li:first-child { border-top: 1px solid var(--border); }
+    .essay-list .meta {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.72rem;
+      color: var(--muted);
+      white-space: nowrap;
+      min-width: 80px;
+    }
+    .essay-list .title { font-size: 1rem; flex: 1; }
+    .essay-list .title a { text-decoration: none; }
+    .essay-list .title a:hover { text-decoration: underline; text-decoration-color: var(--text); }
+    .essay-list .subtitle { font-size: 0.85rem; color: var(--muted); font-style: italic; margin-top: 0.1rem; }
+
+    .subscribe p { font-size: 0.95rem; color: var(--muted); margin-bottom: 1rem; font-style: italic; }
+    .subscribe-form { display: flex; gap: 0; }
+    .subscribe-form input[type="email"] {
+      flex: 1; padding: 0.55rem 0.8rem;
+      border: 1px solid var(--border); border-right: none;
+      background: white; font-size: 0.9rem;
+      font-family: 'Inter', sans-serif; outline: none; color: var(--text);
+    }
+    .subscribe-form input[type="email"]:focus { border-color: var(--text); }
+    .subscribe-form button {
+      padding: 0.55rem 1.1rem; background: var(--text); color: white;
+      border: 1px solid var(--text); font-size: 0.8rem;
+      font-family: 'Inter', sans-serif; letter-spacing: 0.05em;
+      text-transform: uppercase; cursor: pointer; white-space: nowrap;
+    }
+    .subscribe-form button:hover { background: #333; }
+
+    footer {
+      margin-top: 4rem; padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      font-family: 'Inter', sans-serif; font-size: 0.75rem; color: var(--muted);
+      display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;
+    }
+    footer a { color: var(--muted); text-decoration: none; }
+    footer a:hover { color: var(--text); }
+
+    @media (max-width: 600px) {
+      html { font-size: 16px; }
+      .page { padding: 3rem 0 4rem; }
+      .essay-list li { flex-wrap: wrap; gap: 0.4rem; }
+      .essay-list .meta { min-width: auto; }
+    }
   </style>
 </head>
 <body>
-  <nav>
-    <span class="site-name"><a href="/">Billy Jo</a></span>
-    <div class="lang-links">
-      <a href="/">EN</a>
-      <a href="/ko/" class="active">KO</a>
-    </div>
-  </nav>
+<div class="page">
 
-  <div class="hero">
-    <h1>비트코인, 투자,<br>그리고 생각에 관한 글.</h1>
-    <p>댓글 없음. 소음 없음. 그냥 글.</p>
-  </div>
+  <header>
+    <h1>빌리조</h1>
+    <p class="tagline">비트코인. 투자. 생각하는 법.</p>
+    <nav>
+      <a href="/essays/">EN</a>
+      <a href="/essays/ko/" class="active">KO</a>
+    </nav>
+  </header>
 
-  <div class="subscribe-section">
+  <section class="about">
+    <h2>소개</h2>
+    <p>비트코인, 자본 배분, 그리고 실제로 쓸모 있는 사고방식에 대해 씁니다. 댓글 없음. 소음 없음.</p>
+    <p>글을 읽고 뭔가 떠올랐다면, <a href="mailto:reply@bjunjo.com">이메일로 답장</a>해 주세요. 다 읽습니다.</p>
+  </section>
+
+  <section>
+    <h2>에세이</h2>
+    <ul class="essay-list">
+
+      <li>
+        <span class="meta">2025년 6월</span>
+        <div class="title">
+          <a href="/essays/ko/altcoin/">왜 아직도 많은 이들이 알트코인에 손을 댈까?</a>
+          <div class="subtitle">비트코인 반감기 싸이클은 끝나지 않았다</div>
+        </div>
+      </li>
+
+      <li>
+        <span class="meta">2025년 2월</span>
+        <div class="title">
+          <a href="/essays/ko/corporate-culture/">일본식 vs 미국식: 급변하는 한국 기업문화</a>
+          <div class="subtitle">2030세대는 어떻게 대비해야 하나</div>
+        </div>
+      </li>
+
+      <li>
+        <span class="meta">2024년 12월</span>
+        <div class="title">
+          <a href="/essays/ko/bitcoin-one/">우리 모두 '비트코인 1개 모으기 게임'에 초대 당했다</a>
+          <div class="subtitle">개미들이 먹게끔 놓아둔다면 우리 모두가 부자가 되었을 것이다</div>
+        </div>
+      </li>
+
+      <li>
+        <span class="meta">2024년 8월</span>
+        <div class="title">
+          <a href="/essays/ko/investment-is-not-passive/">투자는 불로소득이 아니다</a>
+          <div class="subtitle">투자는 마음 불편해 가며 얻는 '맘불소득'입니다</div>
+        </div>
+      </li>
+
+    </ul>
+  </section>
+
+  <section class="subscribe">
+    <h2>뉴스레터</h2>
     <p>새 글이 올라오면 이메일로 받아보세요 — 정해진 일정 없이, 쓸 때마다.</p>
     <form
       action="https://buttondown.com/api/emails/embed-subscribe/bjunjo"
@@ -62,42 +202,15 @@
       class="subscribe-form"
     >
       <input type="email" name="email" placeholder="이메일 주소" required />
-      <button type="submit">구독하기</button>
+      <button type="submit">구독</button>
     </form>
-  </div>
-
-  <div class="essays">
-    <div class="section-label">에세이</div>
-
-    <div class="essay-item">
-      <div class="essay-meta">2025년 6월 11일</div>
-      <h2><a href="/ko/altcoin/">왜 아직도 많은 이들이 알트코인에 손을 댈까?</a></h2>
-      <p class="subtitle">비트코인 반감기 싸이클은 끝나지 않았다</p>
-    </div>
-
-    <div class="essay-item">
-      <div class="essay-meta">2025년 2월 12일</div>
-      <h2><a href="/ko/corporate-culture/">일본식 vs 미국식: 급변하는 한국 기업문화</a></h2>
-      <p class="subtitle">2030세대는 어떻게 대비해야 하나</p>
-    </div>
-
-    <div class="essay-item">
-      <div class="essay-meta">2024년 12월 10일</div>
-      <h2><a href="/ko/bitcoin-one/">우리 모두 '비트코인 1개 모으기 게임'에 초대 당했다</a></h2>
-      <p class="subtitle">개미들이 먹게끔 놓아둔다면 우리 모두가 부자가 되었을 것이다</p>
-    </div>
-
-    <div class="essay-item">
-      <div class="essay-meta">2024년 8월 9일</div>
-      <h2><a href="/ko/investment-is-not-passive/">투자는 불로소득이 아니다</a></h2>
-      <p class="subtitle">투자는 마음 불편해 가며 얻는 '맘불소득'입니다</p>
-    </div>
-
-  </div>
+  </section>
 
   <footer>
-    <span>© 2026 Billy Jo</span>
-    <span><a href="mailto:reply@bjunjo.com">이메일로 답장하기</a></span>
+    <span>빌리조</span>
+    <span><a href="mailto:reply@bjunjo.com">reply@bjunjo.com</a></span>
   </footer>
+
+</div>
 </body>
 </html>

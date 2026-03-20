@@ -4,194 +4,309 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Billy Jo</title>
-  <meta name="description" content="Essays on Bitcoin, investing, and how to think clearly." />
+  <meta name="description" content="Bitcoin, investing, and how to think clearly. Essays by Billy Jo." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg: #fafaf8;
-      --text: #1a1a1a;
+      --bg: #f9f7f2;
+      --text: #1c1c1c;
       --muted: #888;
-      --accent: #1a1a1a;
-      --border: #e8e8e4;
-      --max: 680px;
+      --link: #1c1c1c;
+      --border: #e2ddd5;
+      --max: 620px;
+      --accent: #c0392b;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { font-size: 18px; }
+
     body {
       background: var(--bg);
       color: var(--text);
-      font-family: 'Georgia', serif;
-      font-size: 18px;
-      line-height: 1.75;
+      font-family: 'EB Garamond', Georgia, serif;
+      line-height: 1.8;
+      padding: 0 1.5rem;
     }
-    a { color: inherit; text-decoration: none; }
-    a:hover { text-decoration: underline; }
+
+    a {
+      color: var(--link);
+      text-decoration: underline;
+      text-decoration-color: var(--border);
+      text-underline-offset: 3px;
+    }
+    a:hover {
+      text-decoration-color: var(--text);
+    }
+
+    /* ── LAYOUT ── */
+    .page {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 5rem 0 6rem;
+    }
+
+    /* ── HEADER ── */
+    header {
+      margin-bottom: 3.5rem;
+    }
+    header h1 {
+      font-family: 'EB Garamond', Georgia, serif;
+      font-size: 2rem;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.15rem;
+    }
+    header .tagline {
+      font-size: 1rem;
+      color: var(--muted);
+      font-style: italic;
+    }
 
     /* ── NAV ── */
     nav {
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 2.5rem 1.5rem 0;
-      display: flex;
-      align-items: baseline;
-      gap: 2rem;
-    }
-    nav .site-name {
-      font-size: 1rem;
-      font-weight: 700;
-      letter-spacing: 0.02em;
-      flex: 1;
-    }
-    nav .lang-links {
+      margin-top: 1.5rem;
       display: flex;
       gap: 1.5rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    nav a {
+      text-decoration: none;
+      color: var(--muted);
+    }
+    nav a:hover { color: var(--text); }
+    nav a.active { color: var(--text); }
+
+    /* ── SECTION ── */
+    section {
+      margin-bottom: 3.5rem;
+    }
+    section h2 {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1.25rem;
+    }
+
+    /* ── ABOUT BLOCK ── */
+    .about p {
+      font-size: 1.1rem;
+      margin-bottom: 0.9rem;
+      max-width: 560px;
+    }
+    .about p:last-child { margin-bottom: 0; }
+
+    /* ── ESSAY LIST ── */
+    .essay-list {
+      list-style: none;
+    }
+    .essay-list li {
+      padding: 0.9rem 0;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+    }
+    .essay-list li:first-child {
+      border-top: 1px solid var(--border);
+    }
+    .essay-list .meta {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.72rem;
+      color: var(--muted);
+      white-space: nowrap;
+      min-width: 80px;
+    }
+    .essay-list .lang {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.65rem;
+      color: var(--muted);
+      border: 1px solid var(--border);
+      padding: 0.05rem 0.35rem;
+      white-space: nowrap;
+    }
+    .essay-list .title {
+      font-size: 1rem;
+      flex: 1;
+    }
+    .essay-list .title a {
+      text-decoration: none;
+    }
+    .essay-list .title a:hover {
+      text-decoration: underline;
+      text-decoration-color: var(--text);
+    }
+    .essay-list .subtitle {
       font-size: 0.85rem;
       color: var(--muted);
-    }
-    nav .lang-links a.active { color: var(--text); font-weight: 600; }
-
-    /* ── HERO ── */
-    .hero {
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 4rem 1.5rem 2rem;
-      border-bottom: 1px solid var(--border);
-    }
-    .hero h1 {
-      font-size: 2rem;
-      font-weight: 700;
-      line-height: 1.2;
-      margin-bottom: 0.75rem;
-    }
-    .hero p {
-      color: var(--muted);
-      font-size: 1rem;
+      font-style: italic;
+      margin-top: 0.1rem;
     }
 
     /* ── SUBSCRIBE ── */
-    .subscribe-section {
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 2rem 1.5rem;
-      border-bottom: 1px solid var(--border);
-    }
-    .subscribe-section p {
+    .subscribe p {
       font-size: 0.95rem;
       color: var(--muted);
       margin-bottom: 1rem;
+      font-style: italic;
     }
     .subscribe-form {
       display: flex;
-      gap: 0.5rem;
-      flex-wrap: wrap;
+      gap: 0;
     }
     .subscribe-form input[type="email"] {
       flex: 1;
-      min-width: 200px;
-      padding: 0.6rem 0.9rem;
+      padding: 0.55rem 0.8rem;
       border: 1px solid var(--border);
+      border-right: none;
       background: white;
       font-size: 0.9rem;
-      font-family: inherit;
+      font-family: 'Inter', sans-serif;
       outline: none;
+      color: var(--text);
     }
     .subscribe-form input[type="email"]:focus {
       border-color: var(--text);
     }
     .subscribe-form button {
-      padding: 0.6rem 1.2rem;
+      padding: 0.55rem 1.1rem;
       background: var(--text);
       color: white;
-      border: none;
-      font-size: 0.9rem;
-      font-family: inherit;
+      border: 1px solid var(--text);
+      font-size: 0.8rem;
+      font-family: 'Inter', sans-serif;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
       cursor: pointer;
       white-space: nowrap;
     }
-    .subscribe-form button:hover { opacity: 0.85; }
-
-    /* ── ESSAY LIST ── */
-    .essays {
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 2rem 1.5rem;
-    }
-    .section-label {
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--muted);
-      margin-bottom: 1.5rem;
-    }
-    .essay-item {
-      padding: 1.25rem 0;
-      border-bottom: 1px solid var(--border);
-    }
-    .essay-item:last-child { border-bottom: none; }
-    .essay-meta {
-      font-size: 0.8rem;
-      color: var(--muted);
-      margin-bottom: 0.3rem;
-      display: flex;
-      gap: 0.75rem;
-      align-items: center;
-    }
-    .essay-meta .lang-tag {
-      font-size: 0.7rem;
-      padding: 0.1rem 0.4rem;
-      border: 1px solid var(--border);
-      color: var(--muted);
-    }
-    .essay-item h2 {
-      font-size: 1.1rem;
-      font-weight: 700;
-      margin-bottom: 0.25rem;
-      line-height: 1.3;
-    }
-    .essay-item h2 a:hover { text-decoration: underline; }
-    .essay-item .subtitle {
-      font-size: 0.9rem;
-      color: var(--muted);
-    }
+    .subscribe-form button:hover { background: #333; }
 
     /* ── FOOTER ── */
     footer {
-      max-width: var(--max);
-      margin: 4rem auto 0;
-      padding: 2rem 1.5rem;
+      margin-top: 4rem;
+      padding-top: 1.5rem;
       border-top: 1px solid var(--border);
-      font-size: 0.8rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.75rem;
       color: var(--muted);
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
       gap: 0.5rem;
     }
-    footer a { color: var(--muted); }
+    footer a { color: var(--muted); text-decoration: none; }
     footer a:hover { color: var(--text); }
 
     @media (max-width: 600px) {
-      body { font-size: 16px; }
-      .hero h1 { font-size: 1.5rem; }
+      html { font-size: 16px; }
+      .page { padding: 3rem 0 4rem; }
+      .essay-list li { flex-wrap: wrap; gap: 0.4rem; }
+      .essay-list .meta { min-width: auto; }
     }
   </style>
 </head>
 <body>
+<div class="page">
 
-  <nav>
-    <span class="site-name"><a href="/">Billy Jo</a></span>
-    <div class="lang-links">
+  <header>
+    <h1>Billy Jo</h1>
+    <p class="tagline">Bitcoin. Investing. How to think clearly.</p>
+    <nav>
       <a href="/" class="active">EN</a>
-      <a href="/ko/">KO</a>
-    </div>
-  </nav>
+      <a href="/essays/ko/">KO</a>
+    </nav>
+  </header>
 
-  <div class="hero">
-    <h1>Essays on Bitcoin,<br>investing, and clear thinking.</h1>
-    <p>No comments. No noise. Just writing.</p>
-  </div>
+  <!-- ABOUT -->
+  <section class="about">
+    <h2>About</h2>
+    <p>I write about Bitcoin, capital allocation, and the mental models that actually matter. No comments. No noise.</p>
+    <p>If something I wrote made you think, <a href="mailto:reply@bjunjo.com">reply by email</a>. I read everything.</p>
+  </section>
 
-  <div class="subscribe-section">
+  <!-- ESSAYS -->
+  <section>
+    <h2>Essays</h2>
+    <ul class="essay-list">
+
+      <li>
+        <span class="meta">Jun 2025</span>
+        <span class="lang">KO</span>
+        <div class="title">
+          <a href="/essays/ko/altcoin/">왜 아직도 많은 이들이 알트코인에 손을 댈까?</a>
+          <div class="subtitle">비트코인 반감기 싸이클은 끝나지 않았다</div>
+        </div>
+      </li>
+
+      <li>
+        <span class="meta">Apr 2024</span>
+        <span class="lang">EN</span>
+        <div class="title">
+          <a href="/essays/en/doing-vs-searching/">Doing vs Searching</a>
+          <div class="subtitle">Do less. Search more.</div>
+        </div>
+      </li>
+
+      <li>
+        <span class="meta">Feb 2025</span>
+        <span class="lang">KO</span>
+        <div class="title">
+          <a href="/essays/ko/corporate-culture/">일본식 vs 미국식: 급변하는 한국 기업문화</a>
+          <div class="subtitle">2030세대는 어떻게 대비해야 하나</div>
+        </div>
+      </li>
+
+      <li>
+        <span class="meta">Jan 2024</span>
+        <span class="lang">EN</span>
+        <div class="title">
+          <a href="/essays/en/first-job/">If only someone told me before my 1st job</a>
+          <div class="subtitle">Choose your industry first.</div>
+        </div>
+      </li>
+
+      <li>
+        <span class="meta">Dec 2024</span>
+        <span class="lang">KO</span>
+        <div class="title">
+          <a href="/essays/ko/bitcoin-one/">우리 모두 '비트코인 1개 모으기 게임'에 초대 당했다</a>
+          <div class="subtitle">개미들이 먹게끔 놓아둔다면 우리 모두가 부자가 되었을 것이다</div>
+        </div>
+      </li>
+
+      <li>
+        <span class="meta">Jun 2023</span>
+        <span class="lang">EN</span>
+        <div class="title">
+          <a href="/essays/en/getting-paid-in-bitcoin/">Why Getting Paid in Bitcoin Is Better</a>
+          <div class="subtitle">Are you crazy?</div>
+        </div>
+      </li>
+
+      <li>
+        <span class="meta">Aug 2024</span>
+        <span class="lang">KO</span>
+        <div class="title">
+          <a href="/essays/ko/investment-is-not-passive/">투자는 불로소득이 아니다</a>
+          <div class="subtitle">투자는 마음 불편해 가며 얻는 '맘불소득'입니다</div>
+        </div>
+      </li>
+
+    </ul>
+  </section>
+
+  <!-- SUBSCRIBE -->
+  <section class="subscribe">
+    <h2>Newsletter</h2>
     <p>New essays by email — whenever I write, not on a schedule.</p>
-    <!-- Buttondown embed — replace YOUR_USERNAME with your Buttondown username -->
     <form
       action="https://buttondown.com/api/emails/embed-subscribe/bjunjo"
       method="post"
@@ -202,66 +317,15 @@
       <input type="email" name="email" placeholder="your@email.com" required />
       <button type="submit">Subscribe</button>
     </form>
-  </div>
-
-  <div class="essays">
-    <div class="section-label">Essays</div>
-
-    <!-- English essays -->
-    <div class="essay-item">
-      <div class="essay-meta">
-        <span>Apr 4, 2024</span>
-        <span class="lang-tag">EN</span>
-      </div>
-      <h2><a href="/en/doing-vs-searching/">Doing vs Searching</a></h2>
-      <p class="subtitle">Do less. Search more.</p>
-    </div>
-
-    <div class="essay-item">
-      <div class="essay-meta">
-        <span>Jan 2, 2024</span>
-        <span class="lang-tag">EN</span>
-      </div>
-      <h2><a href="/en/first-job/">If only someone told me before my 1st job</a></h2>
-      <p class="subtitle">Choose your industry first.</p>
-    </div>
-
-    <div class="essay-item">
-      <div class="essay-meta">
-        <span>Jun 29, 2023</span>
-        <span class="lang-tag">EN</span>
-      </div>
-      <h2><a href="/en/getting-paid-in-bitcoin/">Why Getting Paid in Bitcoin Is Better</a></h2>
-      <p class="subtitle">Are you crazy?</p>
-    </div>
-
-    <!-- Korean essays -->
-    <div class="essay-item">
-      <div class="essay-meta">
-        <span>Jun 11, 2025</span>
-        <span class="lang-tag">KO</span>
-      </div>
-      <h2><a href="/ko/altcoin/">왜 아직도 많은 이들이 알트코인에 손을 댈까?</a></h2>
-      <p class="subtitle">비트코인 반감기 싸이클은 끝나지 않았다</p>
-    </div>
-
-    <div class="essay-item">
-      <div class="essay-meta">
-        <span>Feb 12, 2025</span>
-        <span class="lang-tag">KO</span>
-      </div>
-      <h2><a href="/ko/corporate-culture/">일본식 vs 미국식: 급변하는 한국 기업문화</a></h2>
-      <p class="subtitle">2030세대는 어떻게 대비해야 하나</p>
-    </div>
-
-  </div>
+  </section>
 
   <footer>
-    <span>© 2026 Billy Jo</span>
+    <span>Billy Jo</span>
     <span>
-      <a href="mailto:reply@bjunjo.com">reply by email</a>
+      <a href="mailto:reply@bjunjo.com">reply@bjunjo.com</a>
     </span>
   </footer>
 
+</div>
 </body>
 </html>
