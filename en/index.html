@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Billy Jo — English Essays</title>
+  <meta name="description" content="Essays on Bitcoin, investing, and clear thinking. By Billy Jo." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f9f7f2;
+      --text: #1c1c1c;
+      --muted: #888;
+      --border: #e2ddd5;
+      --max: 620px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 18px; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'EB Garamond', Georgia, serif;
+      line-height: 1.85;
+      padding: 0 1.5rem;
+    }
+    a {
+      color: var(--text);
+      text-decoration: underline;
+      text-decoration-color: var(--border);
+      text-underline-offset: 3px;
+    }
+    a:hover { text-decoration-color: var(--text); }
+    .page { max-width: var(--max); margin: 0 auto; padding: 5rem 0 6rem; }
+    header { margin-bottom: 3.5rem; }
+    header h1 { font-size: 2rem; font-weight: 500; margin-bottom: 0.2rem; }
+    header .tagline { font-size: 1rem; color: var(--muted); font-style: italic; }
+    nav {
+      margin-top: 1.4rem;
+      display: flex; gap: 1.5rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    nav a { text-decoration: none; color: var(--muted); }
+    nav a:hover { color: var(--text); }
+    nav a.active { color: var(--text); }
+    section { margin-bottom: 3.5rem; }
+    section h2 {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.68rem; font-weight: 500;
+      letter-spacing: 0.13em; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 1.25rem;
+    }
+    .about p { font-size: 1.05rem; margin-bottom: 0.85rem; }
+    .about p:last-child { margin-bottom: 0; }
+    .essay-list { list-style: none; }
+    .essay-list li {
+      padding: 0.85rem 0;
+      border-bottom: 1px solid var(--border);
+      display: flex; align-items: baseline; gap: 1rem;
+    }
+    .essay-list li:first-child { border-top: 1px solid var(--border); }
+    .essay-list .meta {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem; color: var(--muted);
+      white-space: nowrap; min-width: 72px;
+    }
+    .essay-list .title { font-size: 1rem; flex: 1; }
+    .essay-list .title a { text-decoration: none; }
+    .essay-list .title a:hover { text-decoration: underline; text-decoration-color: var(--text); }
+    .essay-list .subtitle { font-size: 0.85rem; color: var(--muted); font-style: italic; margin-top: 0.1rem; }
+    .subscribe p { font-size: 0.95rem; color: var(--muted); font-style: italic; margin-bottom: 1rem; }
+    .subscribe-form { display: flex; }
+    .subscribe-form input[type="email"] {
+      flex: 1; padding: 0.55rem 0.8rem;
+      border: 1px solid var(--border); border-right: none;
+      background: white; font-size: 0.88rem;
+      font-family: 'Inter', sans-serif; outline: none; color: var(--text);
+    }
+    .subscribe-form input[type="email"]:focus { border-color: var(--text); }
+    .subscribe-form button {
+      padding: 0.55rem 1.1rem; background: var(--text); color: white;
+      border: 1px solid var(--text); font-size: 0.75rem;
+      font-family: 'Inter', sans-serif; letter-spacing: 0.06em;
+      text-transform: uppercase; cursor: pointer; white-space: nowrap;
+    }
+    .subscribe-form button:hover { background: #333; }
+    footer {
+      margin-top: 4rem; padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      font-family: 'Inter', sans-serif; font-size: 0.73rem; color: var(--muted);
+      display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;
+    }
+    footer a { color: var(--muted); text-decoration: none; }
+    footer a:hover { color: var(--text); }
+    @media (max-width: 600px) {
+      html { font-size: 16px; }
+      .page { padding: 3rem 0 4rem; }
+      .essay-list li { flex-wrap: wrap; gap: 0.4rem; }
+      .essay-list .meta { min-width: auto; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <h1>Billy Jo</h1>
+    <p class="tagline">Bitcoin. Investing. How to think clearly.</p>
+    <nav>
+      <a href="/essays/">한국어</a>
+      <a href="/essays/en/" class="active">English</a>
+    </nav>
+  </header>
+
+  <section class="about">
+    <h2>About</h2>
+    <p>I write about Bitcoin, capital allocation, and the mental models that actually matter. No comments. No noise.</p>
+    <p>If something I wrote made you think, <a href="mailto:reply@bjunjo.com">reply by email</a>. I read everything.</p>
+    <p style="font-size:0.85rem;color:var(--muted);font-style:italic;">Most of my writing is in Korean. <a href="/essays/">Read Korean essays here</a>.</p>
+  </section>
+
+  <section>
+    <h2>Essays</h2>
+    <ul class="essay-list">
+
+      <li>
+        <span class="meta">Apr 2024</span>
+        <div class="title">
+          <a href="/essays/en/doing-vs-searching/">Doing vs Searching</a>
+          <div class="subtitle">Do less. Search more.</div>
+        </div>
+      </li>
+
+      <li>
+        <span class="meta">Jan 2024</span>
+        <div class="title">
+          <a href="/essays/en/first-job/">If only someone told me before my 1st job</a>
+          <div class="subtitle">Choose your industry first.</div>
+        </div>
+      </li>
+
+      <li>
+        <span class="meta">Jun 2023</span>
+        <div class="title">
+          <a href="/essays/en/getting-paid-in-bitcoin/">Why Getting Paid in Bitcoin Is Better</a>
+          <div class="subtitle">Are you crazy?</div>
+        </div>
+      </li>
+
+    </ul>
+  </section>
+
+  <section class="subscribe">
+    <h2>Newsletter</h2>
+    <p>New essays by email — whenever I write, not on a schedule.</p>
+    <form
+      action="https://buttondown.com/api/emails/embed-subscribe/bjunjo"
+      method="post"
+      target="popupwindow"
+      onsubmit="window.open('https://buttondown.com/bjunjo','popupwindow')"
+      class="subscribe-form"
+    >
+      <input type="email" name="email" placeholder="your@email.com" required />
+      <button type="submit">Subscribe</button>
+    </form>
+  </section>
+
+  <footer>
+    <span>Billy Jo</span>
+    <span><a href="mailto:reply@bjunjo.com">reply@bjunjo.com</a></span>
+  </footer>
+
+</div>
+</body>
+</html>
