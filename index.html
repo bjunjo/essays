@@ -79,8 +79,13 @@
     }
 
     /* ── ABOUT ── */
-    .about p { font-size: 1.05rem; margin-bottom: 0.85rem; }
-    .about p:last-child { margin-bottom: 0; }
+    .bio {
+      font-size: 1rem;
+      color: var(--muted);
+      margin-bottom: 3rem;
+    }
+    .bio a { color: var(--muted); }
+    .bio a:hover { color: var(--text); }
 
     /* ── ESSAY LIST ── */
     .essay-list { list-style: none; }
@@ -182,12 +187,8 @@
     </nav>
   </header>
 
-  <!-- ABOUT -->
-  <section class="about">
-    <h2>소개</h2>
-    <p>비트코인과 패러다임 시프트에 대해 쓰는 투자자입니다. 댓글 없음. 소음 없음.</p>
-    <p>읽고 뛭가 떠올랐다면 <a href="mailto:reply@bjunjo.com">이메일로 답장</a>해 주세요. 다 읽습니다. → <a href="/essays/about/">더 자세한 소개</a></p>
-  </section>
+  <!-- ONE-LINE BIO -->
+  <p class="bio">패러다임이 바뀌는 곳에 베팅하는 투자자입니다. <a href="/essays/about/">더 보기 →</a></p>
 
   <!-- ESSAYS -->
   <section>
