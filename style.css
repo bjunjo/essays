@@ -276,16 +276,32 @@ footer {
   font-size: var(--text-xs);
   color: var(--muted);
   display: flex;
+  align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: var(--sp-1);
+  gap: var(--sp-2);
+}
+.footer-left {
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+.footer-right {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
 }
 footer a {
   color: var(--muted);
   text-decoration: none;
   transition: color var(--ease);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
 }
 footer a:hover { color: var(--text); }
+footer a:hover svg { fill: var(--text); }
+footer svg { transition: fill var(--ease); }
 
 /* Footer spacing by context */
 .home-wrap footer { margin-top: var(--sp-2); }
