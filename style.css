@@ -269,6 +269,13 @@ section p:last-child { margin-bottom: 0; }
 }
 .newsletter button:hover { opacity: 0.8; }
 
+.subscribe-msg {
+  font-family: 'Inter', sans-serif;
+  font-size: var(--text-xs);
+  margin-top: var(--space-1);
+  min-height: 1.2em;
+}
+
 /* ── FOOTER ── */
 footer {
   margin-top: var(--space-5);

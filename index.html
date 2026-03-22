@@ -63,20 +63,79 @@
   </ul>
 
   <!-- SUBSCRIBE -->
-  <div class="subscribe">
+  <div class="newsletter">
     <p class="section-label">뉴스레터</p>
-    <p>새 글이 올라오면 이메일로 받아보세요. 정해진 일정 없이, 쓸 때마다.</p>
-    <form
-      action="https://buttondown.com/api/emails/embed-subscribe/bjunjo"
-      method="post"
-      target="popupwindow"
-      onsubmit="window.open('https://buttondown.com/bjunjo','popupwindow')"
-      class="subscribe-form"
-    >
-      <input type="email" name="email" placeholder="이메일 주소" required autocomplete="email" />
-      <button type="submit">구독</button>
+    <p>새 글이 올라오면 이메일로 받아보세요.<br>정해진 일정 없이, 쓸 때마다.</p>
+    <form id="subscribe-form">
+      <input
+        type="email"
+        id="subscribe-email"
+        placeholder="your@email.com"
+        required
+        autocomplete="email"
+      />
+      <button type="submit">구독하기</button>
     </form>
+    <p id="subscribe-msg" class="subscribe-msg" aria-live="polite"></p>
   </div>
+
+  <script>
+  (function() {
+    // Google Apps Script 배포 후 아래 URL을 교체하세요
+    var SCRIPT_URL = 'YOUR_APPS_SCRIPT_URL';
+
+    var form = document.getElementById('subscribe-form');
+    var msg  = document.getElementById('subscribe-msg');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var email = document.getElementById('subscribe-email').value.trim();
+      var btn = form.querySelector('button');
+
+      btn.disabled = true;
+      btn.textContent = '처리 중...';
+      msg.textContent = '';
+
+      // Apps Script URL이 아직 설정되지 않은 경우 안내
+      if (SCRIPT_URL === 'YOUR_APPS_SCRIPT_URL') {
+        msg.textContent = '곧 구독 기능이 활성화됩니다.';
+        msg.style.color = 'var(--muted)';
+        btn.disabled = false;
+        btn.textContent = '구독하기';
+        return;
+      }
+
+      fetch(SCRIPT_URL, {
+        method: 'POST',
+        body: JSON.stringify({ email: email }),
+        headers: { 'Content-Type': 'application/json' }
+      })
+      .then(function(r) { return r.json(); })
+      .then(function(data) {
+        if (data.success) {
+          if (data.message === 'already_subscribed') {
+            msg.textContent = '이미 구독 중인 이메일입니다.';
+          } else {
+            msg.textContent = '구독해 주셔서 감사합니다.';
+            form.reset();
+          }
+          msg.style.color = 'var(--muted)';
+        } else {
+          msg.textContent = '오류가 발생했습니다. 다시 시도해 주세요.';
+          msg.style.color = '#c0392b';
+        }
+      })
+      .catch(function() {
+        msg.textContent = '연결 오류. 잠시 후 다시 시도해 주세요.';
+        msg.style.color = '#c0392b';
+      })
+      .finally(function() {
+        btn.disabled = false;
+        btn.textContent = '구독하기';
+      });
+    });
+  })();
+  </script>
 
   <footer>
     <span>빌리조</span>
