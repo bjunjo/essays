@@ -388,6 +388,27 @@ section p {
 }
 section p:last-child { margin-bottom: 0; }
 
+/* — Book list — */
+section ul {
+  margin: 0 0 0.85rem;
+  padding: 0;
+}
+section ul li {
+  padding: 0.35rem 0;
+  border-bottom: 1px solid var(--border);
+  font-size: var(--text-base);
+  line-height: 1.7;
+}
+section ul li:first-child { border-top: 1px solid var(--border); }
+
+/* — Affiliate notice — */
+.affiliate-notice {
+  font-family: 'Inter', sans-serif;
+  font-size: var(--text-xs);
+  color: var(--muted);
+  margin-top: var(--sp-1);
+}
+
 
 /* ── 7. RESPONSIVE ────────────────────────────────────────── */
 
