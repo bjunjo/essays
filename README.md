@@ -73,3 +73,15 @@ essays/
 Subscribers are collected via [Buttondown](https://buttondown.com). When you publish a new essay, log into Buttondown and send it as an email to your list.
 
 No comments. No noise. Readers who want to respond will reply by email.
+
+---
+
+## Future Projects
+
+### Tech Independence (inspired by Derek Sivers)
+- Reference: https://sive.rs/ti
+- Goal: Self-hosted email + newsletter infrastructure
+- Stack: Vultr VPS ($5/mo) + Listmonk (open source) + Mailgun SMTP relay
+- When to do: Once subscriber list grows past ~200 people
+- Estimated setup time: ~2 hours with Derek's guide
+
