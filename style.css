@@ -511,3 +511,26 @@ section ul li:first-child { border-top: 1px solid var(--border); }
   .essay-list .meta { white-space: nowrap; min-width: 80px; margin-bottom: 0; }
   .essay-list .title { flex: 1; }
 }
+
+
+/* ── 8. DARK MODE ─────────────────────────────────────────── */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg:     #111111;
+    --text:   #e8e4dc;
+    --muted:  #666666;
+    --border: #2a2a2a;
+  }
+
+  /* Subscribe button inverts */
+  .subscribe-btn {
+    background: var(--text);
+    color: var(--bg);
+  }
+
+  /* Book buy button border */
+  .book-buy-link {
+    border-color: var(--border);
+    color: var(--text);
+  }
+}
