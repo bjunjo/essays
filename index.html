@@ -9,9 +9,86 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ── HOME-ONLY: above-the-fold layout ── */
+    html, body { height: 100%; }
+
+    body.home {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      padding: 0;
+    }
+
+    .home-wrap {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      max-width: var(--max);
+      width: 100%;
+      margin: 0 auto;
+      padding: clamp(1.5rem, 5vh, 3rem) 1.5rem clamp(1rem, 3vh, 2rem);
+      box-sizing: border-box;
+    }
+
+    .home-wrap header {
+      margin-bottom: clamp(0.8rem, 2.5vh, 1.5rem);
+    }
+
+    .home-wrap .bio {
+      margin-bottom: clamp(0.8rem, 2.5vh, 1.5rem);
+    }
+
+    .home-wrap .essay-list {
+      flex: 1;
+      margin-bottom: 0;
+    }
+
+    .home-wrap .essay-list li {
+      padding: 0.55rem 0;
+    }
+
+    .home-newsletter {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: clamp(0.6rem, 1.5vh, 1rem) 0;
+      border-top: 1px solid var(--border);
+      margin-top: clamp(0.6rem, 1.5vh, 1rem);
+    }
+    .home-newsletter p {
+      font-family: 'Inter', sans-serif;
+      font-size: var(--text-xs);
+      color: var(--muted);
+      line-height: 1.5;
+      margin: 0;
+    }
+    .home-newsletter a.subscribe-btn {
+      flex-shrink: 0;
+      margin-top: 0;
+      padding: 0.5rem 1rem;
+      min-height: 36px;
+      font-size: var(--text-xs);
+    }
+
+    .home-wrap footer {
+      margin-top: 0;
+      padding-top: clamp(0.5rem, 1.5vh, 0.8rem);
+      border-top: 1px solid var(--border);
+    }
+
+    @media (max-width: 480px) {
+      .home-newsletter {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+      }
+    }
+  </style>
 </head>
-<body class="lang-ko">
-<div class="page">
+<body class="lang-ko home">
+<div class="home-wrap">
 
   <header>
     <h1>빌리조</h1>
@@ -24,8 +101,6 @@
 
   <p class="bio">패러다임이 바뀌는 곳에 베팅하는 투자자입니다. <a href="/essays/about/">더 보기 →</a></p>
 
-  <!-- ESSAYS -->
-  <p class="section-label">에세이</p>
   <ul class="essay-list">
 
     <li>
@@ -62,10 +137,8 @@
 
   </ul>
 
-  <!-- SUBSCRIBE -->
-  <div class="newsletter">
-    <p class="section-label">뉴스레터</p>
-    <p>새 글이 올라오면 이메일로 받아보세요</p>
+  <div class="home-newsletter">
+    <p>새 글이 올라오면 이메일로 받아보세요.</p>
     <a href="https://billyjo.substack.com/subscribe" class="subscribe-btn" target="_blank" rel="noopener">구독하기 →</a>
   </div>
 
