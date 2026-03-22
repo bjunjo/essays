@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>소개 — 빌리조</title>
+  <meta name="description" content="빌리조가 누구인지, 왜 글을 쓰는지." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f9f7f2;
+      --text: #1c1c1c;
+      --muted: #888;
+      --border: #e2ddd5;
+      --max: 620px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 18px; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', Georgia, serif;
+      line-height: 1.9;
+      padding: 0 1.5rem;
+    }
+    a {
+      color: var(--text);
+      text-decoration: underline;
+      text-decoration-color: var(--border);
+      text-underline-offset: 3px;
+    }
+    a:hover { text-decoration-color: var(--text); }
+
+    .page { max-width: var(--max); margin: 0 auto; padding: 5rem 0 6rem; }
+
+    /* ── HEADER ── */
+    header { margin-bottom: 3.5rem; }
+    .site-name {
+      font-family: 'Noto Serif KR', serif;
+      font-size: 1rem;
+      font-weight: 400;
+      text-decoration: none;
+      color: var(--muted);
+    }
+    .site-name:hover { color: var(--text); }
+    nav {
+      margin-top: 1.4rem;
+      display: flex;
+      gap: 1.5rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    nav a { text-decoration: none; color: var(--muted); }
+    nav a:hover { color: var(--text); }
+    nav a.active { color: var(--text); }
+
+    /* ── PAGE TITLE ── */
+    h1 {
+      font-family: 'Noto Serif KR', serif;
+      font-size: 2rem;
+      font-weight: 500;
+      margin-bottom: 2.5rem;
+      letter-spacing: -0.01em;
+    }
+
+    /* ── SECTIONS ── */
+    section { margin-bottom: 3rem; }
+    section h2 {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1.1rem;
+    }
+    section p {
+      font-size: 1.05rem;
+      margin-bottom: 0.9rem;
+    }
+    section p:last-child { margin-bottom: 0; }
+
+    /* ── IDENTITY LIST ── */
+    .identity-list {
+      list-style: none;
+      margin-bottom: 0;
+    }
+    .identity-list li {
+      padding: 0.6rem 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 1.05rem;
+      display: flex;
+      gap: 1rem;
+      align-items: baseline;
+    }
+    .identity-list li:first-child { border-top: 1px solid var(--border); }
+    .identity-list .label {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      color: var(--muted);
+      min-width: 80px;
+      letter-spacing: 0.03em;
+    }
+
+    /* ── QUOTE ── */
+    blockquote {
+      border-left: 2px solid var(--border);
+      padding-left: 1.1rem;
+      color: var(--muted);
+      font-style: italic;
+      font-size: 1rem;
+      margin: 1.5rem 0;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      margin-top: 4rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      font-family: 'Inter', sans-serif;
+      font-size: 0.73rem;
+      color: var(--muted);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    footer a { color: var(--muted); text-decoration: none; }
+    footer a:hover { color: var(--text); }
+
+    @media (max-width: 600px) {
+      html { font-size: 16px; }
+      .page { padding: 3rem 0 4rem; }
+      h1 { font-size: 1.6rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <a href="/essays/" class="site-name">빌리조</a>
+    <nav>
+      <a href="/essays/">글</a>
+      <a href="/essays/about/" class="active">소개</a>
+    </nav>
+  </header>
+
+  <h1>소개</h1>
+
+  <!-- 10초 소개 -->
+  <section>
+    <h2>10초 소개</h2>
+    <ul class="identity-list">
+      <li><span class="label">하는 일</span>투자자, 자본 배분가</li>
+      <li><span class="label">관심사</span>비트코인, 패러다임 시프트, 그 방향으로 가는 기업들</li>
+      <li><span class="label">투자</span>Antler Korea를 통한 스타트업 투자, 비트코인 트레저리 기업</li>
+      <li><span class="label">사는 곳</span>서울 — 언제든 떠날 준비가 된 채로</li>
+    </ul>
+  </section>
+
+  <!-- 좀 더 자세히 -->
+  <section>
+    <h2>좀 더 자세히</h2>
+    <p>부산에서 태어나 호주에서 자랐고, UC 버클리에서 인지과학을 공부했습니다. 10년 가까이 샌프란시스코 베이 에어리어에 있다가 2022년 서울로 돌아왔습니다.</p>
+    <p>지금은 직업도 없고 고용주도 없습니다. 순수한 자본 배분가로 삽니다. 비트코인과 비트코인 트레저리 기업들에 집중하고 있고, Antler Korea를 통해 초기 스타트업에도 투자합니다.</p>
+    <p>단순히 돈을 불리는 것보다, <strong>패러다임이 바뀌는 방향</strong>에 관심이 많습니다. 그 방향으로 가고 있는 사람과 기업을 찾는 것이 제 일입니다.</p>
+
+    <blockquote>"Think ₿ig. Act $mall."</blockquote>
+  </section>
+
+  <!-- 왜 글을 쓰나 -->
+  <section>
+    <h2>왜 글을 쓰나요</h2>
+    <p>글을 쓰는 이유는 단순합니다. 생각을 정리하기 위해서입니다.</p>
+    <p>정리된 생각을 공개적으로 남겨두면, 언젠가 비슷한 생각을 가진 사람이 찾아올 것이라고 믿습니다. 댓글도 없고, 좋아요도 없습니다. 그냥 글만 있습니다.</p>
+    <p>읽고 뭔가 떠올랐다면, <a href="mailto:reply@bjunjo.com">이메일로 연락</a>해 주세요. 다 읽습니다.</p>
+  </section>
+
+  <!-- 지금 뭐 하나 -->
+  <section>
+    <h2>지금은요</h2>
+    <p>비트코인과 비트코인 트레저리 기업(MSTR, Metaplanet 등)에 집중하고 있습니다. 동시에 AI가 만들어내는 다음 패러다임 시프트를 주시하고 있습니다.</p>
+    <p>→ <a href="/essays/">최근 글 보기</a></p>
+  </section>
+
+  <footer>
+    <span>빌리조</span>
+    <span><a href="mailto:reply@bjunjo.com">reply@bjunjo.com</a></span>
+  </footer>
+
+</div>
+</body>
+</html>
