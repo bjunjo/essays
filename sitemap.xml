@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://bjunjo.com/</loc><priority>1.0</priority></url>
+  <url><loc>https://bjunjo.com/about/</loc><priority>0.8</priority></url>
+  <url><loc>https://bjunjo.com/ko/</loc><priority>0.8</priority></url>
+  <url><loc>https://bjunjo.com/en/</loc><priority>0.8</priority></url>
+  <url><loc>https://bjunjo.com/en/about/</loc><priority>0.7</priority></url>
+
+  <!-- Korean essays -->
+  <url><loc>https://bjunjo.com/ko/altcoin/</loc><priority>0.7</priority></url>
+  <url><loc>https://bjunjo.com/ko/nps-mstr/</loc><priority>0.7</priority></url>
+  <url><loc>https://bjunjo.com/ko/bitcoin-bear-market/</loc><priority>0.7</priority></url>
+  <url><loc>https://bjunjo.com/ko/dollar-bitcoin/</loc><priority>0.7</priority></url>
+  <url><loc>https://bjunjo.com/ko/second-bitcoin/</loc><priority>0.7</priority></url>
+  <url><loc>https://bjunjo.com/ko/why-bitcoin/</loc><priority>0.7</priority></url>
+  <url><loc>https://bjunjo.com/ko/tesla-ai-day/</loc><priority>0.7</priority></url>
+  <url><loc>https://bjunjo.com/ko/btc-attractive/</loc><priority>0.7</priority></url>
+  <url><loc>https://bjunjo.com/ko/age-of-self-reliance/</loc><priority>0.7</priority></url>
+  <url><loc>https://bjunjo.com/ko/dont-save-money/</loc><priority>0.7</priority></url>
+  <url><loc>https://bjunjo.com/ko/opportunity-for-all/</loc><priority>0.7</priority></url>
+  <url><loc>https://bjunjo.com/ko/retirement-prep/</loc><priority>0.7</priority></url>
+  <url><loc>https://bjunjo.com/ko/investment-is-not-passive/</loc><priority>0.7</priority></url>
+  <url><loc>https://bjunjo.com/ko/corporate-culture/</loc><priority>0.7</priority></url>
+  <url><loc>https://bjunjo.com/ko/bitcoin-one/</loc><priority>0.7</priority></url>
+
+  <!-- English essays -->
+  <url><loc>https://bjunjo.com/en/mr-market/</loc><priority>0.7</priority></url>
+  <url><loc>https://bjunjo.com/en/getting-paid-in-bitcoin/</loc><priority>0.7</priority></url>
+  <url><loc>https://bjunjo.com/en/doing-vs-searching/</loc><priority>0.7</priority></url>
+  <url><loc>https://bjunjo.com/en/first-job/</loc><priority>0.7</priority></url>
+</urlset>
