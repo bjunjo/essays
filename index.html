@@ -17,6 +17,20 @@
   <meta name="twitter:title" content="Billy Jo — Betting on Paradigm Shifts" />
   <meta name="twitter:description" content="패러다임이 바뀌는 곳에 베팅하는 투자자. 비트코인, 투자, 생각에 관한 에세이." />
   <link rel="stylesheet" href="style.css" />
+  <script>
+    // Redirect non-Korean visitors to English blog
+    // Only redirect on first visit (no ?lang= override, no stored preference)
+    (function() {
+      var redirected = sessionStorage.getItem('lang-redirected');
+      if (redirected) return;
+      sessionStorage.setItem('lang-redirected', '1');
+      var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+      var isKorean = lang.startsWith('ko');
+      if (!isKorean) {
+        window.location.replace('/en/');
+      }
+    })();
+  </script>
 </head>
 <body class="lang-ko home-page">
 <div class="home-wrap">
