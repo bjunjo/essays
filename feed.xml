@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Billy Jo</title>
+    <link>https://bjunjo.com</link>
+    <description>Essays on Bitcoin, investing, and paradigm shifts.</description>
+    <language>ko</language>
+    <atom:link href="https://bjunjo.com/feed.xml" rel="self" type="application/rss+xml"/>
+
+    <item>
+      <title>왜 아직도 많은 이들이 알트코인에 손을 댈까?</title>
+      <link>https://bjunjo.com/ko/altcoin/</link>
+      <guid>https://bjunjo.com/ko/altcoin/</guid>
+      <pubDate>Sun, 01 Jun 2025 00:00:00 +0900</pubDate>
+      <description>비트코인 반감기 싸이클은 끝나지 않았다</description>
+    </item>
+
+    <item>
+      <title>국민연금도 비트코인을 담기 시작했다</title>
+      <link>https://bjunjo.com/ko/nps-mstr/</link>
+      <guid>https://bjunjo.com/ko/nps-mstr/</guid>
+      <pubDate>Thu, 01 Aug 2024 00:00:00 +0900</pubDate>
+      <description>MSTR을 통한 비트코인 간접 노출</description>
+    </item>
+
+    <item>
+      <title>2022~23년 하락장을 버텼다면?</title>
+      <link>https://bjunjo.com/ko/bitcoin-bear-market/</link>
+      <guid>https://bjunjo.com/ko/bitcoin-bear-market/</guid>
+      <pubDate>Mon, 01 Jul 2024 00:00:00 +0900</pubDate>
+      <description>비트코인 장기 보유의 논리</description>
+    </item>
+
+    <item>
+      <title>90년대에 달러를 모았던 사람들처럼, 지금은 비트코인을 모아야 할 때이다</title>
+      <link>https://bjunjo.com/ko/dollar-bitcoin/</link>
+      <guid>https://bjunjo.com/ko/dollar-bitcoin/</guid>
+      <pubDate>Sat, 01 Jun 2024 00:00:00 +0900</pubDate>
+      <description>기축통화 전환의 역사적 관점</description>
+    </item>
+
+    <item>
+      <title>제2의 비트코인?</title>
+      <link>https://bjunjo.com/ko/second-bitcoin/</link>
+      <guid>https://bjunjo.com/ko/second-bitcoin/</guid>
+      <pubDate>Sat, 01 Jun 2024 00:00:00 +0900</pubDate>
+      <description>비트코인은 대체 불가능하다</description>
+    </item>
+
+    <item>
+      <title>왜 비트코인인가?</title>
+      <link>https://bjunjo.com/ko/why-bitcoin/</link>
+      <guid>https://bjunjo.com/ko/why-bitcoin/</guid>
+      <pubDate>Wed, 01 May 2024 00:00:00 +0900</pubDate>
+      <description>비트코인 투자 철학의 핵심</description>
+    </item>
+
+    <item>
+      <title>이번 테슬라 AI데이에서 99% 투자자가 놓쳤던 것</title>
+      <link>https://bjunjo.com/ko/tesla-ai-day/</link>
+      <guid>https://bjunjo.com/ko/tesla-ai-day/</guid>
+      <pubDate>Sat, 01 Oct 2022 00:00:00 +0900</pubDate>
+      <description>패러다임 전환을 먼저 읽는 시각</description>
+    </item>
+
+    <item>
+      <title>비트코인(BTC) 투자가 매력적인 이유</title>
+      <link>https://bjunjo.com/ko/btc-attractive/</link>
+      <guid>https://bjunjo.com/ko/btc-attractive/</guid>
+      <pubDate>Wed, 01 Mar 2023 00:00:00 +0900</pubDate>
+      <description>2023년 하락장 끝물에 쓴 비트코인 투자 논리</description>
+    </item>
+
+    <item>
+      <title>각자도생의 시대가 오고 있다</title>
+      <link>https://bjunjo.com/ko/age-of-self-reliance/</link>
+      <guid>https://bjunjo.com/ko/age-of-self-reliance/</guid>
+      <pubDate>Sat, 01 Oct 2022 00:00:00 +0900</pubDate>
+      <description>지정학과 인구통계가 만드는 새로운 세계</description>
+    </item>
+
+    <item>
+      <title>돈 아끼지 말기</title>
+      <link>https://bjunjo.com/ko/dont-save-money/</link>
+      <guid>https://bjunjo.com/ko/dont-save-money/</guid>
+      <pubDate>Thu, 01 Sep 2022 00:00:00 +0900</pubDate>
+      <description>소비와 투자에 대한 철학</description>
+    </item>
+
+    <item>
+      <title>모두에게 기회는 주어졌다. 그냥 그걸 못 볼 뿐</title>
+      <link>https://bjunjo.com/ko/opportunity-for-all/</link>
+      <guid>https://bjunjo.com/ko/opportunity-for-all/</guid>
+      <pubDate>Fri, 01 Apr 2022 00:00:00 +0900</pubDate>
+      <description>비트코인 투자 철학을 날것으로 드러내는 글</description>
+    </item>
+
+    <item>
+      <title>노후대비, 저라면 이렇게 하겠습니다</title>
+      <link>https://bjunjo.com/ko/retirement-prep/</link>
+      <guid>https://bjunjo.com/ko/retirement-prep/</guid>
+      <pubDate>Wed, 01 Sep 2021 00:00:00 +0900</pubDate>
+      <description>탈무드 1/3 공식과 비트코인</description>
+    </item>
+
+    <item>
+      <title>투자는 불로소득이 아니다</title>
+      <link>https://bjunjo.com/ko/investment-is-not-passive/</link>
+      <guid>https://bjunjo.com/ko/investment-is-not-passive/</guid>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0900</pubDate>
+      <description>투자에 대한 오해와 진실</description>
+    </item>
+
+    <item>
+      <title>일본식 vs 미국식: 급변하는 한국 기업문화</title>
+      <link>https://bjunjo.com/ko/corporate-culture/</link>
+      <guid>https://bjunjo.com/ko/corporate-culture/</guid>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0900</pubDate>
+      <description>한국 기업문화의 변화</description>
+    </item>
+
+    <item>
+      <title>비트코인 1개 모으기 게임</title>
+      <link>https://bjunjo.com/ko/bitcoin-one/</link>
+      <guid>https://bjunjo.com/ko/bitcoin-one/</guid>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0900</pubDate>
+      <description>비트코인 1개를 목표로 하는 이유</description>
+    </item>
+
+    <item>
+      <title>No one is smarter than Mr. Market</title>
+      <link>https://bjunjo.com/en/mr-market/</link>
+      <guid>https://bjunjo.com/en/mr-market/</guid>
+      <pubDate>Wed, 01 Feb 2023 00:00:00 +0900</pubDate>
+      <description>On humility and market wisdom</description>
+    </item>
+
+    <item>
+      <title>Why Getting Paid in Bitcoin Is Better</title>
+      <link>https://bjunjo.com/en/getting-paid-in-bitcoin/</link>
+      <guid>https://bjunjo.com/en/getting-paid-in-bitcoin/</guid>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0900</pubDate>
+      <description>The case for Bitcoin-denominated income</description>
+    </item>
+
+    <item>
+      <title>Doing vs Searching</title>
+      <link>https://bjunjo.com/en/doing-vs-searching/</link>
+      <guid>https://bjunjo.com/en/doing-vs-searching/</guid>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0900</pubDate>
+      <description>On taking action over endless research</description>
+    </item>
+
+    <item>
+      <title>If only someone told me before my 1st job</title>
+      <link>https://bjunjo.com/en/first-job/</link>
+      <guid>https://bjunjo.com/en/first-job/</guid>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0900</pubDate>
+      <description>Lessons from the first year of work</description>
+    </item>
+
+  </channel>
+</rss>
