@@ -136,10 +136,11 @@ header { margin-bottom: var(--sp-4); }
 
 header h1 {
   font-family: 'Inter', sans-serif;
-  font-size: var(--text-lg);
-  font-weight: 500;
-  letter-spacing: -0.01em;
-  line-height: 1.3;
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  margin-bottom: 0;
 }
 header h1 a {
   text-decoration: none;
@@ -317,7 +318,7 @@ footer svg { transition: fill var(--ease); }
 /* ── 6. PAGE VARIANTS ─────────────────────────────────────── */
 
 /* — Homepage overrides — */
-.home-wrap header         { margin-bottom: var(--sp-3); }
+.home-wrap header         { margin-bottom: var(--sp-4); }
 .home-wrap .bio           { margin-bottom: var(--sp-2); }
 .home-wrap .essay-list    { flex: 1; margin-bottom: 0; }
 .home-wrap .essay-list li { padding: 0.55rem 0; }
