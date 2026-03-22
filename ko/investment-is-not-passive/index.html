@@ -1,85 +1,223 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Doing vs Searching — Billy Jo</title>
+  <title>투자는 불로소득이 아니다 — 빌리조</title>
+  <meta name="description" content="투자는 마음 불편해 가며 얻는 '맘불소득'입니다" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
   <style>
-    :root { --bg:#fafaf8; --text:#1a1a1a; --muted:#888; --border:#e8e8e4; --max:680px; }
-    * { box-sizing:border-box; margin:0; padding:0; }
-    body { background:var(--bg); color:var(--text); font-family:'Georgia',serif; font-size:18px; line-height:1.85; }
-    a { color:inherit; text-decoration:none; }
-    a:hover { text-decoration:underline; }
-    nav { max-width:var(--max); margin:0 auto; padding:2.5rem 1.5rem 0; display:flex; align-items:baseline; gap:2rem; }
-    nav .site-name { font-size:1rem; font-weight:700; flex:1; }
-    nav .lang-links { display:flex; gap:1.5rem; font-size:0.85rem; color:var(--muted); }
-    article { max-width:var(--max); margin:0 auto; padding:3.5rem 1.5rem 4rem; }
-    .essay-meta { font-size:0.8rem; color:var(--muted); margin-bottom:2rem; display:flex; gap:0.75rem; }
-    .lang-tag { font-size:0.7rem; padding:0.1rem 0.4rem; border:1px solid var(--border); color:var(--muted); }
-    h1 { font-size:2rem; font-weight:700; line-height:1.2; margin-bottom:0.5rem; }
-    .subtitle { font-size:1.1rem; color:var(--muted); margin-bottom:2.5rem; padding-bottom:2rem; border-bottom:1px solid var(--border); }
-    p { margin-bottom:1.5rem; }
-    footer { max-width:var(--max); margin:0 auto; padding:2rem 1.5rem; border-top:1px solid var(--border); font-size:0.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:0.5rem; }
-    footer a { color:var(--muted); }
-    footer a:hover { color:var(--text); }
-    .back-link { font-size:0.85rem; color:var(--muted); margin-bottom:2rem; display:block; }
-    .back-link:hover { color:var(--text); }
-    @media (max-width:600px) { body { font-size:16px; } h1 { font-size:1.5rem; } }
-  
-    .lang-notice {
-      font-family: 'Inter', -apple-system, sans-serif;
-      font-size: 0.78rem;
-      color: var(--muted, #888);
-      background: transparent;
-      border-left: 2px solid var(--border, #e2ddd5);
-      padding: 0.4rem 0.75rem;
-      margin-bottom: 2rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
+    body { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', Georgia, serif; }
+
+    /* ── TOKENS ── */
+    :root {
+      --bg:      #f9f7f2;
+      --text:    #1c1c1c;
+      --muted:   #888;
+      --border:  #e2ddd5;
+      --max:     600px;
+      --text-xs:   0.7rem;
+      --text-sm:   0.8rem;
+      --text-base: 1rem;
+      --text-name: 1.2rem;
+      --space-1: 0.5rem;
+      --space-2: 1rem;
+      --space-3: 1.5rem;
+      --space-4: 2.5rem;
+      --space-5: 4rem;
     }
-    .lang-notice a {
-      color: var(--muted, #888);
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html {
+      font-size: 16px;
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+    }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.85;
+      padding: 0 var(--space-3);
+      overflow-x: hidden;
+    }
+    a {
+      color: var(--text);
       text-decoration: underline;
-      text-decoration-color: var(--border, #e2ddd5);
-      text-underline-offset: 2px;
+      text-decoration-color: var(--border);
+      text-underline-offset: 3px;
     }
-    .lang-notice a:hover { color: var(--text, #1c1c1c); }
+    a:hover { text-decoration-color: var(--text); }
+    .page {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: var(--space-4) 0 var(--space-5);
+    }
+    /* ── HEADER ── */
+    header { margin-bottom: var(--space-4); }
+    .site-name {
+      font-weight: 500;
+      text-decoration: none;
+      color: var(--text);
+      font-size: var(--text-name);
+      letter-spacing: -0.01em;
+    }
+    .site-name:hover { opacity: 0.7; }
+    nav {
+      margin-top: var(--space-2);
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-2);
+      font-family: 'Inter', sans-serif;
+      font-size: var(--text-xs);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    nav a { text-decoration: none; color: var(--muted); }
+    nav a:hover, nav a.active { color: var(--text); }
+    /* ── ESSAY HEADER ── */
+    .essay-header { margin-bottom: var(--space-4); }
+    .essay-header .date {
+      font-family: 'Inter', sans-serif;
+      font-size: var(--text-xs);
+      color: var(--muted);
+      letter-spacing: 0.05em;
+      margin-bottom: var(--space-1);
+    }
+    .essay-header h1 {
+      font-size: 1.4rem;
+      font-weight: 500;
+      line-height: 1.35;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.4rem;
+    }
+    .essay-header .subtitle {
+      font-size: var(--text-base);
+      color: var(--muted);
+      font-style: italic;
+      line-height: 1.5;
+    }
+    /* ── BODY TEXT ── */
+    .essay-body p {
+      font-size: var(--text-base);
+      line-height: 1.9;
+      margin-bottom: 1.4rem;
+    }
+    .essay-body p:last-child { margin-bottom: 0; }
+    .essay-body h2 {
+      font-size: 1rem;
+      font-weight: 500;
+      margin: 2rem 0 0.8rem;
+      letter-spacing: -0.01em;
+    }
+    .essay-body blockquote {
+      border-left: 2px solid var(--border);
+      padding-left: var(--space-2);
+      color: var(--muted);
+      font-style: italic;
+      margin: 1.5rem 0;
+    }
+    /* ── TRANSLATE NOTICE ── */
+    .translate-notice {
+      font-family: 'Inter', sans-serif;
+      font-size: var(--text-xs);
+      color: var(--muted);
+      margin-bottom: var(--space-4);
+      padding: 0.6rem 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .translate-notice a { color: var(--muted); font-size: var(--text-xs); }
+    .translate-notice a:hover { color: var(--text); }
+    /* ── FOOTER ── */
+    footer {
+      margin-top: var(--space-5);
+      padding-top: var(--space-3);
+      border-top: 1px solid var(--border);
+      font-family: 'Inter', sans-serif;
+      font-size: var(--text-xs);
+      color: var(--muted);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: var(--space-1);
+    }
+    footer a { color: var(--muted); text-decoration: none; }
+    footer a:hover { color: var(--text); }
+    /* ── ESSAY LIST (index pages) ── */
+    .essay-list { list-style: none; margin-bottom: var(--space-5); }
+    .essay-list li {
+      padding: 0.8rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .essay-list li:first-child { border-top: 1px solid var(--border); }
+    .essay-list .meta {
+      display: block;
+      font-family: 'Inter', sans-serif;
+      font-size: var(--text-xs);
+      color: var(--muted);
+      margin-bottom: 0.2rem;
+    }
+    .essay-list .title { font-size: var(--text-base); line-height: 1.5; }
+    .essay-list .title a { text-decoration: none; }
+    .essay-list .title a:hover { text-decoration: underline; text-decoration-color: var(--text); }
+    .essay-list .subtitle {
+      font-size: var(--text-sm);
+      color: var(--muted);
+      font-style: italic;
+      margin-top: 0.15rem;
+      line-height: 1.5;
+    }
+    .section-label {
+      font-family: 'Inter', sans-serif;
+      font-size: var(--text-xs);
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: var(--space-2);
+    }
+    /* ── DESKTOP ENHANCEMENT ── */
+    @media (min-width: 640px) {
+      body { padding: 0 var(--space-4); }
+      .essay-list li { display: flex; align-items: baseline; gap: var(--space-2); }
+      .essay-list .meta { white-space: nowrap; min-width: 80px; margin-bottom: 0; }
+      .essay-list .title { flex: 1; }
+    }
 
   </style>
 </head>
 <body>
-  <nav>
-    <span class="site-name"><a href="/">Billy Jo</a></span>
-    <div class="lang-links">
-      <a href="/" class="active">EN</a>
-      <a href="/ko/">KO</a>
-    </div>
-  </nav>
-  <article>
-    <a href="/" class="back-link">← All essays</a>
-    <div class="lang-notice">
-      This essay is written in Korean. &nbsp;<a href="https://translate.google.com/translate?sl=ko&tl=en&u=https://bjunjo.com/ko/investment-is-not-passive/" target="_blank" rel="noopener">Translate with Google →</a>
-    </div>
+<div class="page">
 
-    <div class="essay-meta">
-      <span>Apr 4, 2024</span>
-      <span class="lang-tag">EN</span>
-    </div>
-    <h1>Doing vs Searching</h1>
-    <p class="subtitle">Do less. Search more.</p>
+  <header>
+    <a href="/essays/" class="site-name">빌리조</a>
+    <nav>
+      <a href="/essays/">글</a>
+      <a href="/essays/about/">소개</a>
+      <a href="/essays/en/">English</a>
+    </nav>
+  </header>
 
-    <p>Most people confuse being busy with making progress. They do more. They fill the calendar. They optimize the routine. But the real question is never "how do I do this better?" It is "should I be doing this at all?"</p>
+  <div class="essay-header">
+    <div class="date">2024년 8월</div>
+    <h1>투자는 불로소득이 아니다</h1>
+    <p class="subtitle">투자는 마음 불편해 가며 얻는 '맘불소득'입니다</p>
+  </div>
 
-    <p>Searching is harder than doing. Doing gives you the feeling of movement. Searching forces you to sit still and ask uncomfortable questions. What do I actually want? What is the highest-leverage thing I could be working on right now? What am I avoiding by staying busy?</p>
+  <div class="translate-notice">
+    This essay is written in Korean. <a href="https://translate.google.com/translate?sl=ko&tl=en&u=https://bjunjo.com/ko/investment-is-not-passive/">Translate with Google →</a>
+  </div>
 
-    <p>The people who change their lives are not the ones who work the hardest. They are the ones who paused long enough to find the right direction. Then they worked hard.</p>
+  <div class="essay-body">
+    <p>글이 곧 올라옵니다.</p>
+  </div>
 
-    <p>Do less. Search more. Find the thing worth doing. Then do it completely.</p>
-  </article>
   <footer>
-    <span>© 2026 Billy Jo</span>
-    <span><a href="mailto:reply@bjunjo.com">reply by email</a></span>
+    <a href="/essays/">← 모든 글</a>
+    <a href="mailto:reply@bjunjo.com">reply@bjunjo.com</a>
   </footer>
+
+</div>
 </body>
 </html>
