@@ -162,8 +162,13 @@ nav a {
   color: var(--muted);
   transition: color var(--ease);
 }
-nav a:hover,
-nav a.active { color: var(--text); }
+nav a:hover { color: var(--text); }
+nav a.active {
+  color: var(--text);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
 
 /* — Bio line — */
 .bio {
