@@ -536,3 +536,26 @@ section ul li:first-child { border-top: 1px solid var(--border); }
   .essay-list .title { flex: 1; }
 }
 
+/* ── 8. ENGLISH FONT COMPENSATION ────────────────────────────
+   EB Garamond has a lower x-height than Noto Serif KR.
+   Bump English body text ~12% larger for visual parity.
+   ─────────────────────────────────────────────────────────── */
+body.lang-en .essay-body p,
+body.lang-en .essay-body li,
+body.lang-en .essay-body blockquote {
+  font-size: 1.12rem;
+  line-height: 1.95;
+}
+body.lang-en .essay-header h1 {
+  font-size: 1.7rem;
+}
+body.lang-en .essay-header .subtitle {
+  font-size: 1.12rem;
+}
+body.lang-en .essay-list .title {
+  font-size: 1.05rem;
+}
+body.lang-en .essay-list .subtitle {
+  font-size: 0.95rem;
+}
+
