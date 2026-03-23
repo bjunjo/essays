@@ -515,7 +515,23 @@ section ul li:first-child { border-top: 1px solid var(--border); }
 }
 
 
-/* ── 7. RESPONSIVE ────────────────────────────────────────── */
+/* ── 7. BOOK NOTE ─────────────────────────────────────────── */
+.book-note-section {
+  margin-bottom: var(--sp-4);
+}
+.book-note {
+  font-family: 'Inter', sans-serif;
+  font-size: var(--text-base);
+  line-height: 1.75;
+  background: #f8f5f0;
+  border-left: 3px solid #c9b99a;
+  padding: var(--sp-2) var(--sp-3);
+  border-radius: 0 4px 4px 0;
+  color: var(--text);
+  margin-bottom: 0;
+}
+
+/* ── 8. RESPONSIVE ────────────────────────────────────────── */
 
 /* Mobile: stack home-newsletter vertically */
 @media (max-width: 480px) {
