@@ -559,3 +559,45 @@ body.lang-en .essay-list .subtitle {
   font-size: 0.95rem;
 }
 
+
+/* ── 9. RISK LIST ─────────────────────────────────────────────
+   Used in /ko/why-bitcoin/ for the 24 stock risks.
+   Card-style rows: number left, name + description right.
+   ─────────────────────────────────────────────────────────── */
+.risk-list {
+  margin: 1.5rem 0 2rem;
+}
+.risk-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.risk-item:first-child {
+  border-top: 1px solid var(--border);
+}
+.risk-num {
+  flex-shrink: 0;
+  width: 1.8rem;
+  font-family: 'Inter', sans-serif;
+  font-size: var(--text-xs);
+  color: var(--muted);
+  padding-top: 0.25rem;
+  text-align: right;
+}
+.risk-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.risk-content strong {
+  font-weight: 500;
+  color: var(--text);
+  font-size: var(--text-base);
+}
+.risk-content span {
+  font-size: var(--text-sm);
+  color: var(--muted);
+  line-height: 1.6;
+}
