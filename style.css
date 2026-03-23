@@ -56,6 +56,7 @@ html {
   font-size: 18px;  /* mobile-first: larger for readability */
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
+  overflow-x: hidden;
 }
 @media (min-width: 640px) {
   html { font-size: 17px; }  /* desktop: slightly smaller */
