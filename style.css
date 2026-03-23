@@ -53,13 +53,13 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html {
-  font-size: 18px;  /* mobile-first: larger for readability */
+  font-size: 20px;  /* mobile-first: comfortable for all ages */
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
   overflow-x: hidden;
 }
 @media (min-width: 640px) {
-  html { font-size: 17px; }  /* desktop: slightly smaller */
+  html { font-size: 18px; }  /* desktop */
 }
 
 ul { list-style: none; }
