@@ -53,9 +53,12 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html {
-  font-size: 16px;
+  font-size: 18px;  /* mobile-first: larger for readability */
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
+}
+@media (min-width: 640px) {
+  html { font-size: 17px; }  /* desktop: slightly smaller */
 }
 
 ul { list-style: none; }
