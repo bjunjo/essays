@@ -494,6 +494,24 @@ section ul li:first-child { border-top: 1px solid var(--border); }
   margin-top: 0.1rem;
 }
 
+/* — CTA line — */
+.cta-line {
+  font-family: 'Inter', sans-serif;
+  font-size: var(--text-sm);
+  margin-top: var(--sp-2);
+}
+.cta-line a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+  border-bottom: 1px solid var(--text);
+  padding-bottom: 1px;
+}
+.cta-line a:hover {
+  color: var(--muted);
+  border-bottom-color: var(--muted);
+}
+
 /* — Book detail page — */
 .book-back {
   font-family: 'Inter', sans-serif;
