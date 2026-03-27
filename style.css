@@ -417,6 +417,30 @@ section p {
 }
 section p:last-child { margin-bottom: 0; }
 
+/* — X embed quote — */
+.x-embed {
+  border-left: 2px solid var(--border);
+  padding: var(--sp-2) var(--sp-2) var(--sp-2) var(--sp-3);
+  margin: var(--sp-3) 0 0;
+  background: transparent;
+}
+.x-embed p {
+  font-size: var(--text-sm);
+  line-height: 1.7;
+  color: var(--text);
+  margin-bottom: 0.4rem !important;
+  font-style: italic;
+}
+.x-embed-source {
+  font-style: normal !important;
+  font-size: var(--text-xs) !important;
+  color: var(--muted) !important;
+}
+.x-embed-source a {
+  color: var(--muted);
+  text-decoration: underline;
+}
+
 /* — Book list — */
 section ul {
   margin: 0 0 0.85rem;
