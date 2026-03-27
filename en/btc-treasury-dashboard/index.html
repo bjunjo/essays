@@ -4,19 +4,55 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Why I Built My Own Bitcoin Treasury Dashboard — Billy Jo</title>
-  <meta name="description" content="There are great trackers out there. I built one for the companies I actually care about." />
+  <meta name="description" content="I built an open-source Bitcoin treasury dashboard tracking Strategy (MSTR), Metaplanet, and the companies I actually hold. Here's why — and how to fork it for yourself." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
   <meta property="og:type" content="article" />
   <meta property="og:title" content="Why I Built My Own Bitcoin Treasury Dashboard" />
-  <meta property="og:description" content="There are great trackers out there. I built one for the companies I actually care about." />
+  <meta property="og:description" content="I built an open-source Bitcoin treasury dashboard tracking Strategy (MSTR), Metaplanet, and the companies I actually hold. Here's why — and how to fork it for yourself." />
   <meta property="og:url" content="https://bjunjo.com/en/btc-treasury-dashboard/" />
   <meta property="og:site_name" content="Billy Jo — Betting on Paradigm Shifts" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Why I Built My Own Bitcoin Treasury Dashboard" />
-  <meta name="twitter:description" content="There are great trackers out there. I built one for the companies I actually care about." />
+  <meta name="twitter:description" content="I built an open-source Bitcoin treasury dashboard tracking Strategy (MSTR), Metaplanet, and the companies I actually hold. Here's why — and how to fork it for yourself." />
+  <meta name="keywords" content="Bitcoin treasury dashboard, MSTR, Strategy, Metaplanet, Bitcoin corporate treasury, mNAV, BTC per share, open source" />
+  <link rel="canonical" href="https://bjunjo.com/en/btc-treasury-dashboard/" />
   <link rel="stylesheet" href="../../style.css" />
+  <style>
+    .cta-block {
+      margin: 2.5rem 0;
+      padding: 1.25rem 1.5rem;
+      border-left: 3px solid #f7931a;
+      background: rgba(247, 147, 26, 0.05);
+    }
+    .cta-block p {
+      margin: 0 0 0.75rem 0;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      color: #555;
+    }
+    .cta-block p:last-child {
+      margin-bottom: 0;
+    }
+    .cta-btn {
+      display: inline-block;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: #f7931a;
+      text-decoration: none;
+      border: 1px solid #f7931a;
+      padding: 0.4rem 0.9rem;
+      border-radius: 3px;
+      margin-right: 0.75rem;
+      margin-top: 0.25rem;
+    }
+    .cta-btn:hover {
+      background: #f7931a;
+      color: #fff;
+    }
+  </style>
 </head>
 <body class="lang-en">
 <div class="page">
@@ -33,30 +69,44 @@
   <div class="essay-header">
     <div class="date">March 2026</div>
     <h1>Why I Built My Own Bitcoin Treasury Dashboard</h1>
-    <p class="subtitle">There are great trackers out there. I built one for the companies I actually care about.</p>
+    <p class="subtitle">I track Strategy (MSTR), Metaplanet, and the other companies I actually hold. Here's why I stopped relying on generic trackers — and how you can fork it for yourself.</p>
   </div>
   <div class="essay-body">
-<p>There are plenty of great websites out there tracking corporate Bitcoin adoption. Sites like <a href="https://bitcointreasuries.net" target="_blank" rel="noopener">bitcointreasuries.net</a> do a fantastic job aggregating data across the entire ecosystem. But as I spent more time analyzing the capital allocation strategies of these companies, I realized I didn't need a directory of every company that ever bought a fraction of a Bitcoin.</p>
+
+<p>There are plenty of great websites tracking corporate Bitcoin adoption. <a href="https://bitcointreasuries.net" target="_blank" rel="noopener">bitcointreasuries.net</a> does a fantastic job aggregating data across the entire ecosystem. But as I spent more time analyzing the capital allocation strategies of these companies, I realized I didn't need a directory of every company that ever bought a fraction of a Bitcoin.</p>
 
 <p>I needed a focused, personal dashboard tracking only the companies I have high conviction in — the ones executing the Bitcoin treasury strategy at scale.</p>
 
-<p>That's why I built the <a href="https://github.com/bjunjo/btc-treasury-dashboard" target="_blank" rel="noopener">btc-treasury-dashboard</a>. It's a live, open-source dashboard for my own research and investment tracking, focused on the companies that matter most to my thesis.</p>
+<p>So I built one.</p>
+
+<div class="cta-block">
+  <p>Want to see it before reading further?</p>
+  <a href="https://billy-treasury.manus.space" target="_blank" rel="noopener" class="cta-btn">View the live dashboard →</a>
+  <a href="https://github.com/bjunjo/btc-treasury-dashboard" target="_blank" rel="noopener" class="cta-btn">View on GitHub →</a>
+</div>
 
 <h2>The problem with generic trackers</h2>
 
 <p>When you are deeply invested in the Bitcoin ecosystem — specifically the corporate treasury strategy pioneered by Strategy (MSTR) and now being adopted globally by companies like Metaplanet (3350) in Asia — the metrics that matter change.</p>
 
-<p>I don't just want to know how much Bitcoin a company holds. I want to see the live NAV premium. I want to calculate the exact satoshis per share. I want to understand their debt coverage ratio — how much Bitcoin they hold relative to their outstanding debt. I want to see the live Kimchi premium. And crucially, I want to see the primary source disclosures — SEC 8-Ks, TSE TDnet filings, LSE RNS — pulled directly into the same view, so I can verify the data myself. "Don't Trust, Verify" applies to equity investments just as much as it does to running a node.</p>
+<p>I don't just want to know how much Bitcoin a company holds. I want to see the live NAV premium. I want to calculate the exact satoshis per share. I want to understand their debt coverage ratio — how much Bitcoin they hold relative to their outstanding debt. I want to see the live Kimchi premium. And crucially, I want to see the primary source disclosures — SEC 8-Ks, TSE TDnet filings, LSE RNS — pulled directly into the same view, so I can verify the data myself.</p>
+
+<p>"Don't Trust, Verify" applies to equity investments just as much as it does to running a node.</p>
 
 <p>Existing trackers are great for broad overviews. They lack the specific, first-principles metrics and the focused signal-to-noise ratio I need for serious capital allocation decisions.</p>
 
-<h2>What it does right now</h2>
+<h2>What it tracks right now</h2>
 
-<p>The current version tracks a curated watchlist: Strategy (MSTR), Metaplanet (3350), Smarter Web Company (SWC), H100 Group, and Nakamoto Inc. (NAKA). These are the companies I am actively watching and holding positions in.</p>
+<p>The current version covers a curated watchlist: Strategy (MSTR), Metaplanet (3350), Smarter Web Company (SWC), H100 Group, and Nakamoto Inc. (NAKA). These are the companies I am actively watching and holding positions in.</p>
 
 <p>For each company, the dashboard shows live stock prices and market caps, mNAV (the premium or discount to the Bitcoin NAV), BTC/Share in satoshis, a debt coverage risk label, and the latest regulatory filings pulled directly from SEC EDGAR, TDnet, LSE alldata, and MFN RSS. Everything is computed from raw inputs — not scraped from aggregators — so I can audit every number back to its source.</p>
 
-<p>The whole thing runs without a database. All data is fetched live from public APIs and cached in memory. No API keys required. Anyone can clone it and run it locally in a few minutes.</p>
+<p>The whole thing runs without a database. All data is fetched live from public APIs and cached in memory. No API keys required.</p>
+
+<div class="cta-block">
+  <p>See it live — all data updates every 60 seconds.</p>
+  <a href="https://billy-treasury.manus.space" target="_blank" rel="noopener" class="cta-btn">Open the dashboard →</a>
+</div>
 
 <h2>What's coming</h2>
 
@@ -64,15 +114,18 @@
 
 <p>I may add a Korean translation at some point to make it more accessible to the Korean Bitcoin community. But for now it stays in English so it's accessible to anyone in the world.</p>
 
-<h2>Fork it</h2>
+<h2>Fork it and make it yours</h2>
 
 <p>I made this open-source because I believe anyone who can code — or use AI agents — should be able to fork it, swap in the companies they care about, and run their own personal treasury dashboard. The whole point is that it's yours. You decide what goes on it.</p>
 
 <p>If you want to track different companies, change the metrics, or build something entirely different on top of the same architecture, go ahead. That's exactly what it's there for.</p>
 
-<p>Check it out on <a href="https://github.com/bjunjo/btc-treasury-dashboard" target="_blank" rel="noopener">GitHub →</a></p>
+<div class="cta-block">
+  <p>No API keys required. Clone it and run locally in minutes.</p>
+  <a href="https://github.com/bjunjo/btc-treasury-dashboard" target="_blank" rel="noopener" class="cta-btn">Fork on GitHub →</a>
+  <a href="https://billy-treasury.manus.space" target="_blank" rel="noopener" class="cta-btn">View live dashboard →</a>
+</div>
 
-<p>Or go straight to the live dashboard: <a href="https://billy-treasury.manus.space" target="_blank" rel="noopener"><strong>billy-treasury.manus.space →</strong></a></p>
   </div>
   <footer>
     <span class="footer-left"><a href="/en/" style="text-decoration:none;color:inherit;">← All essays</a></span>
