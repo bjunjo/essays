@@ -8,6 +8,14 @@
     <atom:link href="https://bjunjo.com/feed.xml" rel="self" type="application/rss+xml"/>
 
     <item>
+      <title>Why I Built My Own Bitcoin Treasury Dashboard</title>
+      <link>https://bjunjo.com/en/btc-treasury-dashboard/</link>
+      <guid>https://bjunjo.com/en/btc-treasury-dashboard/</guid>
+      <pubDate>Thu, 27 Mar 2026 00:00:00 +0900</pubDate>
+      <description>There are great trackers out there. I built one for the companies I actually care about.</description>
+    </item>
+
+    <item>
       <title>왜 아직도 많은 이들이 알트코인에 손을 댈까?</title>
       <link>https://bjunjo.com/ko/altcoin/</link>
       <guid>https://bjunjo.com/ko/altcoin/</guid>

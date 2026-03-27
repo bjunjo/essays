@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Why I Built My Own Bitcoin Treasury Dashboard — Billy Jo</title>
+  <meta name="description" content="There are great trackers out there. I built one for the companies I actually care about." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Why I Built My Own Bitcoin Treasury Dashboard" />
+  <meta property="og:description" content="There are great trackers out there. I built one for the companies I actually care about." />
+  <meta property="og:url" content="https://bjunjo.com/en/btc-treasury-dashboard/" />
+  <meta property="og:site_name" content="Billy Jo — Betting on Paradigm Shifts" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Why I Built My Own Bitcoin Treasury Dashboard" />
+  <meta name="twitter:description" content="There are great trackers out there. I built one for the companies I actually care about." />
+  <link rel="stylesheet" href="../../style.css" />
+</head>
+<body class="lang-en">
+<div class="page">
+  <header>
+    <h1><a href="/">Billy Jo</a></h1>
+    <nav>
+      <a href="/en/" class="active">Essays</a>
+      <a href="/en/about/">About</a>
+      <a href="/en/books/">Books</a>
+      <a href="https://billy-treasury.manus.space" target="_blank" rel="noopener">BTC Dashboard ↗</a>
+      <a href="/">한국어</a>
+    </nav>
+  </header>
+  <div class="essay-header">
+    <div class="date">March 2026</div>
+    <h1>Why I Built My Own Bitcoin Treasury Dashboard</h1>
+    <p class="subtitle">There are great trackers out there. I built one for the companies I actually care about.</p>
+  </div>
+  <div class="essay-body">
+<p>There are plenty of great websites out there tracking corporate Bitcoin adoption. Sites like <a href="https://bitcointreasuries.net" target="_blank" rel="noopener">bitcointreasuries.net</a> do a fantastic job aggregating data across the entire ecosystem. But as I spent more time analyzing the capital allocation strategies of these companies, I realized I didn't need a directory of every company that ever bought a fraction of a Bitcoin.</p>
+
+<p>I needed a focused, personal dashboard tracking only the companies I have high conviction in — the ones executing the Bitcoin treasury strategy at scale.</p>
+
+<p>That's why I built the <a href="https://github.com/bjunjo/btc-treasury-dashboard" target="_blank" rel="noopener">btc-treasury-dashboard</a>. It's a live, open-source dashboard for my own research and investment tracking, focused on the companies that matter most to my thesis.</p>
+
+<h2>The problem with generic trackers</h2>
+
+<p>When you are deeply invested in the Bitcoin ecosystem — specifically the corporate treasury strategy pioneered by MicroStrategy (MSTR) and now being adopted globally by companies like Metaplanet (3350) in Asia — the metrics that matter change.</p>
+
+<p>I don't just want to know how much Bitcoin a company holds. I want to see the live NAV premium. I want to calculate the exact satoshis per share. I want to understand their debt coverage ratio — how much Bitcoin they hold relative to their outstanding debt. I want to see the live Kimchi premium. And crucially, I want to see the primary source disclosures — SEC 8-Ks, TSE TDnet filings, LSE RNS — pulled directly into the same view, so I can verify the data myself. "Don't Trust, Verify" applies to equity investments just as much as it does to running a node.</p>
+
+<p>Existing trackers are great for broad overviews. They lack the specific, first-principles metrics and the focused signal-to-noise ratio I need for serious capital allocation decisions.</p>
+
+<h2>What it does right now</h2>
+
+<p>The current version tracks a curated watchlist: MicroStrategy (MSTR), Metaplanet (3350), Smarter Web Company (SWC), H100 Group, and Nakamoto Inc. (NAKA). These are the companies I am actively watching and holding positions in.</p>
+
+<p>For each company, the dashboard shows live stock prices and market caps, mNAV (the premium or discount to the Bitcoin NAV), BTC/Share in satoshis, a debt coverage risk label, and the latest regulatory filings pulled directly from SEC EDGAR, TDnet, LSE alldata, and MFN RSS. Everything is computed from raw inputs — not scraped from aggregators — so I can audit every number back to its source.</p>
+
+<p>The whole thing runs without a database. All data is fetched live from public APIs and cached in memory. No API keys required. Anyone can clone it and run it locally in a few minutes.</p>
+
+<h2>What's coming</h2>
+
+<p>This is v1.0. There is a lot left to improve. Mobile optimization is the most obvious gap — when you sort by a specific column on a small screen, that sorted column isn't always the one prominently shown. I also plan to add more companies (Capital B in France, OranjeBTC in Brazil) once their disclosure sources are confirmed, and automate the data that is currently hardcoded.</p>
+
+<p>I may add a Korean translation at some point to make it more accessible to the Korean Bitcoin community. But for now it stays in English so it's accessible to anyone in the world.</p>
+
+<h2>Fork it</h2>
+
+<p>I made this open-source because I believe anyone who can code — or use AI agents — should be able to fork it, swap in the companies they care about, and run their own personal treasury dashboard. The whole point is that it's yours. You decide what goes on it.</p>
+
+<p>If you want to track different companies, change the metrics, or build something entirely different on top of the same architecture, go ahead. That's exactly what it's there for.</p>
+
+<p>Check it out on <a href="https://github.com/bjunjo/btc-treasury-dashboard" target="_blank" rel="noopener">GitHub →</a></p>
+  </div>
+  <footer>
+    <span class="footer-left"><a href="/en/" style="text-decoration:none;color:inherit;">← All essays</a></span>
+    <span class="footer-right">
+      <a href="https://x.com/bjunjo" target="_blank" rel="noopener" title="X (Twitter)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+      <a href="https://forms.gle/6KFTXDb8VVX9ZotcA" target="_blank" rel="noopener" title="Contact"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></a>
+      <a href="/feed.xml" title="RSS Feed"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><circle cx="6.18" cy="17.82" r="2.18"/><path d="M4 4.44v2.83c7.03 0 12.73 5.7 12.73 12.73h2.83c0-8.59-6.97-15.56-15.56-15.56zm0 5.66v2.83c3.9 0 7.07 3.17 7.07 7.07h2.83c0-5.47-4.43-9.9-9.9-9.9z"/></svg></a>
+    </span>
+  </footer>
+</div>
+</body>
+</html>
