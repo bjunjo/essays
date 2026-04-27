@@ -390,39 +390,36 @@ footer svg { transition: fill var(--ease); }
   margin: var(--sp-3) 0;
 }
 
-/* — Scenario table — */
-.scenario-table {
-  width: 100%;
-  border-collapse: collapse;
+/* — Scenario list — */
+.scenario-list {
   margin: var(--sp-3) 0;
-  font-size: var(--text-sm);
+  padding: 0;
 }
-.scenario-table thead {
-  border-bottom: 2px solid var(--border);
+.scenario-item {
+  padding: 0.65rem 0;
+  border-bottom: 1px solid var(--border);
 }
-.scenario-table th {
+.scenario-item:first-child { border-top: 1px solid var(--border); }
+.scenario-item dt {
   font-family: 'Inter', sans-serif;
   font-size: var(--text-xs);
   font-weight: 500;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
   color: var(--muted);
-  text-align: left;
-  padding: var(--sp-1) var(--sp-2) var(--sp-1) 0;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 0.2rem;
 }
-.scenario-table td {
-  padding: 0.65rem var(--sp-2) 0.65rem 0;
-  border-bottom: 1px solid var(--border);
+.scenario-item dd {
+  font-size: var(--text-base);
+  line-height: 1.6;
+  margin: 0;
   color: var(--text);
 }
-.scenario-table tbody tr:last-child td { border-bottom: none; }
-.scenario-table .return {
+.scenario-item dd strong {
   font-weight: 600;
 }
-@media (max-width: 640px) {
-  .scenario-table { font-size: var(--text-xs); }
-  .scenario-table th,
-  .scenario-table td { padding: 0.5rem 0.4rem 0.5rem 0; }
+.scenario-best dd strong {
+  font-size: 1.05em;
 }
 
 /* — Translate notice — */
