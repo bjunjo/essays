@@ -7,6 +7,7 @@
   <url><loc>https://bjunjo.com/en/about/</loc><priority>0.7</priority></url>
 
   <!-- Korean essays -->
+  <url><loc>https://bjunjo.com/ko/m2-index/</loc><priority>0.7</priority></url>
   <url><loc>https://bjunjo.com/ko/simple-path/</loc><priority>0.7</priority></url>
   <url><loc>https://bjunjo.com/ko/altcoin/</loc><priority>0.7</priority></url>
   <url><loc>https://bjunjo.com/ko/nps-mstr/</loc><priority>0.7</priority></url>
